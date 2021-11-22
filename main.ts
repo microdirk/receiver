@@ -1,4 +1,6 @@
 radio.onReceivedValue(function (name, value) {
+    bitbot.oledNumber(value, 0, 0, false)
+    bitbot.oledText(name, 0, 20, false)
     if (name == "Left") {
         if (value == 1) {
             led.plot(0, 4)
